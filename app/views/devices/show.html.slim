@@ -1,0 +1,24 @@
+p#notice = notice
+
+container.align-center
+ .row
+    .col.mx-5.mt-5
+      table.table-striped.table-bordered.align-center.table
+        tn Device info
+        th DeviceID
+        th Device Serial
+        tr
+          td = @device.id
+          td = @device.serial
+    .col.mx-5.mt-5
+      table.table-striped.table-bordered.align-center.table
+        tn Events
+        th Created_at
+        th Value
+        tr
+          td = @event
+          td = @event
+
+ => link_to 'Edit', edit_device_path(@device)
+ '|
+ =< link_to 'Back', devices_path

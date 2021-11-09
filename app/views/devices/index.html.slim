@@ -1,0 +1,26 @@
+.container
+  h1 Listing devices
+  h1 =@devices.count
+
+  hr
+
+  table.table-striped.table-bordered.align-center.table
+    thead
+      tr
+        th ID
+        th Serial
+        th Show, Change or Delete Device
+
+    tbody
+      - @devices.each do |device|
+        tr
+          td = device.id
+          td = device.serial
+          td
+            btn.btn-group.btn
+              button.btn.btn-secondary = link_to 'Show', device
+              button.btn.btn-secondary = link_to 'Edit', edit_device_path(device)
+              button.btn.btn-secondary = link_to 'Destroy', device, data: { confirm: 'Are you sure?' }, method: :delete
+      tr
+        td
+          = link_to 'New Device', new_device_path
