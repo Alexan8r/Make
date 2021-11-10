@@ -67,6 +67,4 @@ class DevicesController < ApplicationController
   def device_params
     params.require(:device).permit(:serial, :id)
   end
-
-
 end

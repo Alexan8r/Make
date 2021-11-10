@@ -1,12 +1,13 @@
-p#notice = notice
+.container
+    p#notice = notice
 
-p
-  strong Device:
-  = @event.device_id
-p
-  strong Value:
-  = @event.value
+    p
+      strong Device:
+      = @event.device_id
+    p
+      strong Value:
+      = @event.value
 
-=> link_to 'Edit', edit_event_path(@event)
-'|
-=< link_to 'Back', events_path
+    => link_to 'Edit', edit_event_path(@event)
+    '|
+    =< link_to 'Back', events_path

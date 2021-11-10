@@ -7,6 +7,7 @@ ruby '3.0.2'
 
 gem 'bootstrap', '~> 5.1.1'
 gem 'chartkick'
+gem 'font-awesome-sass'
 gem 'groupdate'
 gem 'jbuilder', '~> 2.7'
 gem 'pg', '~> 1.1'
@@ -20,6 +21,7 @@ gem 'sass-rails', '>= 6'
 gem 'slim-rails'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
