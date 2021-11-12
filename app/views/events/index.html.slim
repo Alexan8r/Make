@@ -1,7 +1,6 @@
 .container
   h1 Listing events
   h1 = @events.count
-
   table.table-striped.table-bordered.align-center.table
     thead
       tr
@@ -22,4 +21,8 @@
           td = link_to 'Destroy', event, data: { confirm: 'Are you sure?' }, method: :delete
 
   br
-  = link_to 'New Event', new_event_path
+
+  pt-1
+   = link_to new_event_path, class: 'btn btn-outline-primary'
+     span.i.fas.fa-plus
+       span.ml-1 Добавить
