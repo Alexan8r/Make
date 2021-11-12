@@ -5,7 +5,5 @@ Rails.application.routes.draw do
   resources :events
   get 'tables/index'
   get 'home/index'
-  get 'devices/index'
-  get 'events/index'
   root to: 'home#index'
 end
