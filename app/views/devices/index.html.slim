@@ -7,12 +7,13 @@
         span.i.fas.fa-plus
           span.ml-1 Добавить
 
+.table-responsive
   table.table.table-hover
     thead
+        tr
         th ID
         th Serial
-        th Дата
-        th
+        th Дата создания
         th
     tbody
       - @devices.each do |device|
