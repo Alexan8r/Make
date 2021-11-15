@@ -6,17 +6,8 @@
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
-import "channels";
-import "chartkick/chart.js";
-import "bootstrap";
-import "select2";
-import "select2/dist/css/select2.css";
-import "bootstrap-datepicker";
-import "bootstrap-datepicker/dist/css/bootstrap-datepicker.css";
-import "bootstrap-datepicker/js/locales/bootstrap-datepicker.ru.js";
-
-
-
+import "channels"
+import "chartkick/chart.js"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
