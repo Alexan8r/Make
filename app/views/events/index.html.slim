@@ -1,13 +1,19 @@
-.container
-  h1 Listing events
-  h1 = @events.count
-  table.table-striped.table-bordered.align-center.table
+.row.pt-5.pb-4.d-flex.justify-content-between
+  .col
+    h2 События (#{@events.count})
+  .col-auto.text-right
+    .pt-1
+      = link_to new_event_path, class: 'btn btn-outline-primary'
+        span.i.fas.fa-plus
+          span.ml-1 Добавить
+
+.table-responsive
+  table.table.table-hover
     thead
       tr
         th ID
         th Device
         th Value
-        th
         th
 
     tbody
@@ -16,13 +22,9 @@
           td = event.id
           td = event.device_id
           td = event.value
-          td = link_to 'Show', event
           td = link_to 'Edit', edit_event_path(event)
           td = link_to 'Destroy', event, data: { confirm: 'Are you sure?' }, method: :delete
 
   br
 
-  pt-1
-   = link_to new_event_path, class: 'btn btn-outline-primary'
-     span.i.fas.fa-plus
-       span.ml-1 Добавить
+
