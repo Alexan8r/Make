@@ -4,12 +4,7 @@ p#notice = notice
   .col
     span.h2 = @device.serial
 
-  .col-auto.text-right
-    .pt-1
-      = link_to edit_device_path(@device), class: 'btn btn-outline-secondary ml-2'
-          span.i.fas.fa-pencil-alt
-      = link_to devices_path, class: 'btn btn-outline-secondary ml-2'
-          span.i.fas.fa-list
+
 .row
   .col-md-6
     .card.mb-4
@@ -45,3 +40,12 @@ p#notice = notice
                 td = event.id
                 td = event.value
                 td = event.created_at
+
+.col-auto.text-right
+   .pt-1
+    = link_to edit_device_path(@device), class: 'btn btn-outline-secondary ml-2'
+     span.i.fas.fa-pencil-alt
+    = link_to devices_path, class: 'btn btn-outline-secondary ml-2'
+     span.i.fas.fa-list
+     = link_to device_path, method: :delete, class: 'btn btn-outline-secondary ml-2'
+       span.i.fas.fa-trash-alt
