@@ -11,11 +11,10 @@
 .table-responsive
   table.table.table-hover
     thead
-        tr
         th ID
         th Serial
         th Дата создания
-        th
+        th style ='min-width: 100px;'
     tbody
       - @devices.each do |device|
         tr
