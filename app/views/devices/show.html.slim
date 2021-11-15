@@ -1,17 +1,15 @@
 p#notice = notice
 
- .row.pt-5.pb-4.d-flex.justify-content-between
+.row.pt-5.pb-4.d-flex.justify-content-between
   .col
-    span.h2 = @device.name
+    span.h2 = @device.serial
 
   .col-auto.text-right
     .pt-1
       = link_to edit_device_path(@device), class: 'btn btn-outline-secondary ml-2'
-      span.i.fas.fa-pencil-alt
-      span.ml-1 Изменить
-      = link_to device_path, class: 'btn btn-outline-secondary ml-2'
-      span.i.fas.fa-list
-
+          span.i.fas.fa-pencil-alt
+      = link_to devices_path, class: 'btn btn-outline-secondary ml-2'
+          span.i.fas.fa-list
 .row
   .col-md-6
     .card.mb-4
@@ -19,12 +17,12 @@ p#notice = notice
       .card-body
         .row.mb-2
           .col-4.text-right
-            strong Серийный номер
+            strong Serial
           .col-8
             = @device.serial
         .row.mb-2
           .col-4.text-right
-            strong Время создания
+            strong Created At
           .col-8
             = @device.created_at
 
@@ -47,5 +45,3 @@ p#notice = notice
                 td = event.id
                 td = event.value
                 td = event.created_at
-=> link_to 'Edit', edit_device_path(@device)
-=< link_to 'Back', devices_path

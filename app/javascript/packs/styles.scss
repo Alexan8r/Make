@@ -1,0 +1,128 @@
+@import "~bootstrap/scss/functions";
+@import 'variables';
+
+@import '~bootstrap/scss/bootstrap';
+//@import "~bootstrap/scss/functions";
+//@import "~bootstrap/scss/variables";
+//@import "~bootstrap/scss/mixins";
+
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+
+@import "vue-multiselect/dist/vue-multiselect.min.css";
+@import '../src/multiselect';
+
+// @import 'vue-select/dist/vue-select.css';
+// @import "../src/vue_select.scss";
+
+// Custom
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+// Vue component downloading
+[v-cloak] {
+  display: none;
+}
+
+.form-control.is-valid {
+  background-image: none;
+}
+
+.no-bs-validation {
+  .is-valid, .is-invalid {
+    border-color: $gray-400;
+    background-image: inherit;
+    &:focus {
+      border-color: inherit;
+      box-shadow: 0 0 0 .2rem $gray-400;
+    }
+  }
+}
+
+.custom-control-label {
+  width: 100%;
+}
+
+.bg-as-image-cover {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-as-image-contain {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.link-dark {
+  a {
+    color: #212529
+  }
+}
+
+.breadcrumb {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.bg-gray {
+  background-color: #e9ecef;
+}
+
+tr.no-border td {
+  border: 0;
+  padding-top: 0;
+}
+
+td.no-border {
+  border: 0;
+}
+
+td.right-border {
+  border-right: 1px solid #dee2e6;;
+}
+
+.badge.selected {
+  border: 3px solid #0a007a;
+}
+
+.w-1 {
+  width: 1px;
+}
+
+.status-circle {
+  display: inline-block;
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  opacity: 0.8;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  // border: 1px solid #000000;
+}
+.deficit-background {
+  background-color: rgba(228, 201, 201, 0.6);
+}
+
+.group-background {
+  background-color: rgba(201, 228, 204, 0.6);
+}

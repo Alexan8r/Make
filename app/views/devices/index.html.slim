@@ -1,35 +1,28 @@
-.container
-  h1 Listing devices
-  h1 =@devices.count
+.row.pt-5.pb-4.d-flex.justify-content-between
+  .col
+    h2 Устройства (#{@devices.count})
+  .col-auto.text-right
+    .pt-1
+      = link_to new_device_path, class: 'btn btn-outline-primary'
+        span.i.fas.fa-plus
+          span.ml-1 Добавить
 
-  hr
+.table-responsive
+  table.table.table-hover
+    thead
+      tr
+        th ID
+        th Serial
+        th Дата
+        th
 
-  .row.pt-5.pb-4.d-flex.justify-content-between
-    .col
-      h2 Устройства
-    .col-auto.text-right
-      .pt-1
-        = link_to new_device_path, class: 'btn btn-outline-primary'
-          span.i.fas.fa-plus
-            span.ml-1 Добавить
-
-  .table-responsive
-    table.table.table-hover
-      thead
+    tbody
+      - @devices.each do |device|
         tr
-         th ID
-         th Serial
-         th Дата
-         th
-
-      tbody
-        - @devices.each do |device|
-          tr
-            td = device.id
-            td = link_to device.serial, device_path(device)
-            td = device.created_at.to_date
-            td.text-right
-              = link_to edit_device_path(device), class: 'btn btn-outline-secondary btn-sm ml-1'
-                span.i.fas.fa-pencil-alt
-              = link_to device_path(device), class: 'btn btn-outline-secondary btn-sm ml-1'
-                span.i.fas.fa-search
+          td = device.id
+          td = link_to device.serial, device_path(device)
+          td = device.created_at.to_date
+/              = link_to edit_device_path(device), class: 'btn btn-outline-secondary btn-sm ml-1'
+               span.i.fas.fa-pencil-alt
+            = link_to device_path(device), class: 'btn btn-outline-secondary btn-sm ml-1'
+              span.i.fas.fa-search
