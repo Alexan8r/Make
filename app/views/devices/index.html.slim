@@ -2,7 +2,6 @@
   .col
     h2 Устройства (#{@devices.count})
   .col-auto.text-right
-    .pt-1
       = link_to new_device_path, class: 'btn btn-outline-primary'
        span.i.fas.fa-plus
        span Добавить
@@ -14,7 +13,7 @@
         th ID
         th Serial
         th Дата создания
-        th style ='min-width: 100px;'
+        th
     tbody
       - @devices.each do |device|
         tr
