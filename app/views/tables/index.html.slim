@@ -1,29 +1,14 @@
-html lang="en" xmlns="http://www.w3.org/1999/html"
-  head
-    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
-    meta charset="UTF-8" /
-    meta content="width=device-width, user-scalable=yes" name="viewport" style=("width: 90%; height: 91%") /
-    meta content="ie=edge" http-equiv="X-UA-Compatible" /
-    title Document
-  body
-  .container
-    section style=("margin-left: 2%; margin-right: 2%")
-      section style=("margin-top: 30px")
-      section style=("margin-bottom: 20px")
-        = line_chart({"2021-01-01" => 21, "2021-01-02" => 19, "2021-01-03" => 10, "2021-01-04" => 7})
-        = line_chart({"2021-01-01" => 2, "2021-01-02" => 16, "2021-01-03" => 4, "2021-01-04" => 5, "2021-01-05" => 4, "2021-01-06" => 14, "2021-01-07" => 5, "2021-01-08" => 13, "2021-01-09" => 24, "2021-01-10" => 15, "2021-01-11" => 14, "2021-01-12" => 14})
-      section style=("margin-bottom: 10px")
+body
+        = line_chart({"2021-01-06" => 14, "2021-01-07" => 5, "2021-01-08" => 13, "2021-01-09" => 13, "2021-01-10" => 15, "2021-01-11" => 14, "2021-01-12" => 14})
         = javascript_include_tag "//www.google.com/jsapi"
         = timeline [                                    \
             ["Washington", "2011-04-29", "2014-03-03"], \
             ["Adams", "2013-03-03", "2014-03-03"],      \
-            ["Jefferson", "2010-03-03", "2013-03-03"]   \
+            ["Jefferson", "2010-03-03", "2013-03-03"],  \
+            ["New-York", "2012-03-03", "2013-03-03"]   \
           ]
-
-    = line_chart [                                                             \
-        {name: "Workout", data: {"2021-01-01" => 5, "2021-01-02" => 14}},      \
-          {name: "Second", data: {"2021-01-01" => 5, "2021-01-02" => -14}},
+        = line_chart [                                                             \
+            {name: "Workout", data: {"2021-01-01" => 5, "2021-01-02" => 14}},      \
+            {name: "Second", data: {"2021-01-01" => 5, "2021-01-02" => -14}},
             {name: "Third", data: {"2021-01-01" => 5, "2021-01-02" => 19}}\
-          ]
-
-      Groupdate.time_zone = "Pacific Time (US & Canada)"
+            ]

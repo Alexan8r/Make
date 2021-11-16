@@ -1,9 +1,6 @@
-p#notice = notice
-
 .row.pt-5.pb-4.d-flex.justify-content-between
   .col
-    span.h2 = @device.serial
-
+    h2 = @device.serial
 
 .row
   .col-md-6
@@ -21,10 +18,10 @@ p#notice = notice
           .col-8
             = @device.created_at
 
+
   .col-md-6
     .card.mb-4
-      .card-header
-        | События
+      .card-header События
       .card-body
         .table-responsive
           table.table.table-hover
@@ -33,19 +30,14 @@ p#notice = notice
                 th ID события
                 th Значение события
                 th Время события
-                th
             tbody
-            - @device.events.each do |event|
-              tr
-                td = event.id
-                td = event.value
-                td = event.created_at
+              - @device.events.each do |event|
+                tr
+                  td = event.id
+                  td = event.value
+                  td = event.created_at
 
-.col-auto.text-right
-   .pt-1
-    = link_to edit_device_path(@device), class: 'btn btn-outline-secondary ml-2'
-     span.i.fas.fa-pencil-alt
-    = link_to devices_path, class: 'btn btn-outline-secondary ml-2'
-     span.i.fas.fa-list
-/     = link_to device_path(@device), method: :delete, class: 'btn btn-outline-secondary ml-2'
-       span.i.fas.fa-trash-alt
+= link_to edit_device_path(@device), class: 'btn btn-outline-secondary ml-2'
+  span.i.fas.fa-pencil-alt
+= link_to devices_path, class: 'btn btn-outline-secondary ml-2'
+  span.i.fas.fa-list
