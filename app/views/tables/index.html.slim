@@ -1,5 +1,5 @@
 body
-  .h1 style=("text-align: center") График создания устройств и событий
+  .h1 style=("text-align: center") График количества устройств и событий
 
   h6.h6 style=("text-align: center") Events created
   = line_chart Event.group_by_day(:created_at).count
