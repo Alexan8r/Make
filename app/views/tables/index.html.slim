@@ -1,14 +1,12 @@
 body
-        = line_chart({"2021-01-06" => 14, "2021-01-07" => 5, "2021-01-08" => 13, "2021-01-09" => 13, "2021-01-10" => 15, "2021-01-11" => 14, "2021-01-12" => 14})
-        = javascript_include_tag "//www.google.com/jsapi"
+  = line_chart Event.group_by_day(:created_at).count
+  = line_chart Device.group_by_day(:created_at).count
+
+  = javascript_include_tag "//www.google.com/jsapi"
         = timeline [                                    \
             ["Washington", "2011-04-29", "2014-03-03"], \
             ["Adams", "2013-03-03", "2014-03-03"],      \
             ["Jefferson", "2010-03-03", "2013-03-03"],  \
             ["New-York", "2012-03-03", "2013-03-03"]   \
           ]
-        = line_chart [                                                             \
-            {name: "Workout", data: {"2021-01-01" => 5, "2021-01-02" => 14}},      \
-            {name: "Second", data: {"2021-01-01" => 5, "2021-01-02" => -14}},
-            {name: "Third", data: {"2021-01-01" => 5, "2021-01-02" => 19}}\
-            ]
+
