@@ -1,12 +1,8 @@
 body
+  .h1 style=("text-align: center") График создания устройств и событий
+
+  h6.h6 style=("text-align: center") Events created
   = line_chart Event.group_by_day(:created_at).count
+
+  h6.h6 style=("text-align: center") Devices created
   = line_chart Device.group_by_day(:created_at).count
-
-  = javascript_include_tag "//www.google.com/jsapi"
-        = timeline [                                    \
-            ["Washington", "2011-04-29", "2014-03-03"], \
-            ["Adams", "2013-03-03", "2014-03-03"],      \
-            ["Jefferson", "2010-03-03", "2013-03-03"],  \
-            ["New-York", "2012-03-03", "2013-03-03"]   \
-          ]
-
