@@ -18,6 +18,8 @@
           .col-8
             = @device.created_at
 
+    = line_chart @device.events.group(:temperature).group_by_week(:created_at).count
+    = line_chart @device.events.group(:humidity).group_by_week(:created_at).count
 
   .col-md-6
     .card.mb-4
@@ -28,18 +30,20 @@
             thead
               tr
                 th ID события
-                th Значение события
                 th Время события
+                th Температура
+                th Влажность
             tbody
               - @device.events.each do |event|
                 tr
                   td = event.id
-                  td = event.value
                   td = event.created_at
-
+                  td = event.temperature
+                  td = event.humidity
 = link_to edit_device_path(@device), class: 'btn btn-outline-secondary ml-2'
   span.i.fas.fa-pencil-alt
 = link_to devices_path, class: 'btn btn-outline-secondary ml-2'
   span.i.fas.fa-list
 = link_to device_path(@device), method: :delete, class: 'btn btn-outline-secondary ml-2'
   span.i.fas.fa-trash-alt
+

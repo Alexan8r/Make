@@ -12,15 +12,20 @@
       tr
         th ID
         th Device
-        th Value
+        th Temperature
+        th Humidity
+        th Created_at
         th
+
 
     tbody
       - @events.each do |event|
         tr
           td = event.id
           td = event.device_id
-          td = event.value
+          td = event.temperature
+          td = event.humidity
+          td = event.created_at
           td = link_to 'Edit', edit_event_path(event)
           td = link_to 'Destroy', event, data: { confirm: 'Are you sure?' }, method: :delete
 
