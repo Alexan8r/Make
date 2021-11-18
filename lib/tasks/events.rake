@@ -2,7 +2,7 @@
 
 namespace :events do
   task event: :environment do
-    30.times do
+    300.times do
       @event = Event.new
       @event.device_id = Device.ids.sample
       @event.value = rand(max = 1000)
