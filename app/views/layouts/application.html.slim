@@ -16,52 +16,15 @@ nav.navbar.navbar-expand.navbar-light
       img src='/logo_short.png' style='height: 30px;' alt='logo'
     .collapse.navbar-collapse
       ul.navbar-nav.mr-auto
-          li.nav-item
-            a.nav-link href=tables_index_path
-              | Графики
-          li.nav-item
-            a.nav-link href=devices_path
-              | Устройства
-          li.nav-item
-           a.nav-link href=events_path
-              | События
-    /! clock widget start
-    javascript:
-      var css_file = document.createElement("link");
-      css_file.setAttribute("rel", "stylesheet");
-      css_file.setAttribute("type", "text/css");
-      css_file.setAttribute("href", "https://s.bookcdn.com//css/cl/bw-cl-120x45.css?v=0.0.1");
-      document.getElementsByTagName("head")[0].appendChild(css_file);
-    #tw_6_415911238
-      div style=("width:130px; height:45px; margin: 0 auto;")
-        a href="https://nochi.com/time/orel-36685"  Орёл
-      br
-    javascript:
-      function setWidgetData_415911238(data) {
-          if (typeof (data) != 'undefined' && data.results.length > 0) {
-              for (var i = 0; i < data.results.length; ++i) {
-                  var objMainBlock = '';
-                  var params = data.results[i];
-                  objMainBlock = document.getElementById('tw_' + params.widget_type + '_' + params.widget_id);
-                  if (objMainBlock !== null) objMainBlock.innerHTML = params.html_code;
-              }
-          }
-      }
-
-      var clock_timer_415911238 = -1;
-      widgetSrc = "https://widgets.booked.net/time/info?ver=2;domid=589;type=6;id=415911238;scode=124;city_id=36685;wlangid=20;mode=1;details=0;background=ffffff;border_color=ffffff;color=333333;add_background=a0a1a1;add_color=08488d;head_color=333333;border=0;transparent=0";
-      var widgetUrl = location.href;
-      widgetSrc += '&ref=' + widgetUrl;
-      var wstrackId = "";
-      if (wstrackId) {
-          widgetSrc += ';wstrackId=' + wstrackId + ';'
-      }
-      var timeBookedScript = document.createElement("script");
-      timeBookedScript.setAttribute("type", "text/javascript");
-      timeBookedScript.src = widgetSrc;
-      document.body.appendChild(timeBookedScript);
-/! clock widget end
-
+        li.nav-item
+        a.nav-link href=tables_index_path
+          | Графики
+        li.nav-item
+        a.nav-link href=devices_path
+          | Устройства
+        li.nav-item
+        a.nav-link href=events_path
+          | События
 body
   .container
     = yield
