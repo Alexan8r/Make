@@ -25,6 +25,7 @@ gem 'simple_form'
 gem 'slim-rails'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
+gem 'whenever'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
