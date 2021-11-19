@@ -1,3 +1,5 @@
+
+
 .row.pt-5.pb-4.d-flex.justify-content-between
   .col
     h2 = @device.serial
@@ -21,20 +23,20 @@
       .card-header
         | Температура
       .card-body
-      = line_chart @device.events.group_by_week(:created_at).count
+        = line_chart @device.events.pluck(:created_at, :temperature), xmin: DateTime.now - 24.hour, min: 0, max: 50
 
     .card.mt-4
       .card-header
         | Влажность
       .card-body
-        = line_chart @device.events.group_by_week(:created_at).count
+        = line_chart @device.events.pluck(:created_at, :humidity), xmin: DateTime.now - 24.hour, min: 20, max:100
 
   .col-md-6
     .card.mb-4
       .card-header События
       .card-body
         .table-responsive
-          table.table.table-hover
+          table.table.table-hover.table_sort
             thead
               tr
                 th ID события

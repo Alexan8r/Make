@@ -10834,4 +10834,12 @@ textarea.form-control-lg {
   }
 }
 
+  th.sorted[data-order="-1"]::after {
+    content: "▼"
+  }
+
+  th.sorted[data-order="1"]::after {
+    content: "▲"
+  }
+
 /*# sourceMappingURL=bootstrap.css.map */

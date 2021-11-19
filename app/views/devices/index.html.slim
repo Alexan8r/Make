@@ -4,13 +4,14 @@
   .col-auto.text-right
     = link_to new_device_path, class: 'btn btn-outline-primary'
       span.mr-2 Добавить
-.table-responsive
+.table-responsive.table_sort
   table.table.table-hover
     thead
       tr
         th ID
         th Serial
         th Дата создания
+        th Количество событий
         th
     tbody
       - @devices.each do |device|
@@ -18,3 +19,4 @@
           td = link_to device.id, device_path(device)
           td = device.serial
           td = device.created_at.to_date
+          td = device.events.count
