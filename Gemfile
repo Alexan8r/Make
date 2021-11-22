@@ -9,6 +9,7 @@ gem 'bcrypt'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bootstrap', '~> 5.1.1'
 gem 'chartkick'
+gem 'clickhouse-activerecord'
 gem 'css', '~> 0.0.4'
 gem 'font-awesome-sass'
 gem 'groupdate'

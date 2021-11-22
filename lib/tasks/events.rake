@@ -2,7 +2,7 @@
 
 namespace :events do
   task event: :environment do
-    50.times do
+    24.times do
       @event = Event.new
       @event.device_id = Device.ids.sample
       @event.value = rand(10_000..99_999)

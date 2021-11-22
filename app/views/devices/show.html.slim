@@ -19,18 +19,17 @@
             strong Created At
           .col-8
             = @device.created_at
-    .card
+    .card.mt-4
       .card-header
         | Температура
       .card-body
-        = line_chart @device.events.all.pluck(:created_at, :temperature), xmin: DateTime.now - 2.day, min: 0, max: 55
-        p = @device.events.pluck(:temperature).max
+        =  line_chart @device.events.pluck(:created_at, :temperature), xmin: DateTime.now - 24.hours
     .card.mt-4
       .card-header
         | Влажность
       .card-body
-        = line_chart @device.events.all.pluck(:created_at, :humidity), xmin: DateTime.now - 2.day, min: 20, max: 100
-        p = @device.events.pluck(:humidity).max
+        =  line_chart @device.events.pluck(:created_at, :humidity), xmin: DateTime.now - 24.hours
+
   .col-md-6
     .card.mb-4
       .card-header События

@@ -88,6 +88,9 @@ GEM
     chartkick (4.1.2)
     childprocess (4.1.0)
     chronic (0.10.2)
+    clickhouse-activerecord (0.5.7)
+      activerecord (>= 5.2)
+      bundler (>= 1.13.4)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     css (0.0.4)
@@ -269,6 +272,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   chartkick
+  clickhouse-activerecord
   css (~> 0.0.4)
   font-awesome-sass
   groupdate
