@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-json.array! @device do |d|
+json.array! @devices do |d|
   json.id d.id
   json.serial d.serial
   json.created_at d.created_at

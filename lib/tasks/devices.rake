@@ -2,9 +2,9 @@
 
 namespace :device do
   task create_device: :environment do
-    10.times do
+    2.times do
       @device = Device.new
-      @device.serial = rand(max = 10_000)
+      @device.serial = rand(10_000)
       @device.save
     end
   end
